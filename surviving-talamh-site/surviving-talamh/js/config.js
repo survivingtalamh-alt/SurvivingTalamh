@@ -9,7 +9,7 @@
 
 window.ST_CONFIG = {
   // Supabase project URL — e.g. "https://abcdefgh.supabase.co"
-  SUPABASE_URL: "https://vvzbzueqzejztjppmcmu.supabase.co/rest/v1/",
+  SUPABASE_URL: "https://vvzbzueqzejztjppmcmu.supabase.co",
 
   // Supabase anon (public) key — safe to expose in client code
   // because Row-Level Security policies protect the data
