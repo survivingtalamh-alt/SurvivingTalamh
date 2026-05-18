@@ -36,3 +36,4 @@ The short version:
 - Site built for Matthew Lockett
 
 - <!-- Test commit to verify auto-deploy -->
+- <!-- Testing auto-deploy on fresh project -->
