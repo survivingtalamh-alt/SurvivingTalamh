@@ -423,6 +423,15 @@ button { font-family: inherit; cursor: pointer; }
   margin: var(--sp-4) 0 0;
   text-align: center;
 }
+.countdown-subtext {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin: var(--sp-2) 0 0;
+  text-align: center;
+  opacity: 0.7;
+}
 
 /* ----- Buttons ----- */
 .hero-cta {
