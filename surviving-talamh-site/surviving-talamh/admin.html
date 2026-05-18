@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin — Surviving Talamh</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="/assets/cover.png" />
+</head>
+<body class="admin-body">
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="admin-header">
+    <a href="/" class="nav-brand">
+      <span class="nav-brand-mark">ST</span>
+      <span class="nav-brand-text">Surviving Talamh — Admin</span>
+    </a>
+    <button id="logout-btn" class="btn btn-ghost btn-small" hidden>Sign out</button>
+  </header>
+
+  <main class="admin-main">
+    <!-- Login -->
+    <section id="login-panel" class="admin-panel">
+      <h1 class="admin-title">Moderator Sign In</h1>
+      <p class="admin-sub">Only Matthew has access to this panel.</p>
+      <form id="login-form" class="admin-form" autocomplete="off">
+        <div class="form-row">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required />
+        </div>
+        <div class="form-row">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+        <p id="login-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard-panel" class="admin-panel" hidden>
+      <div class="admin-tabs" role="tablist">
+        <button class="admin-tab is-active" data-tab="pending-art" role="tab">
+          Pending Art <span class="tab-count" id="count-pending-art">0</span>
+        </button>
+        <button class="admin-tab" data-tab="pending-comments" role="tab">
+          Pending Comments <span class="tab-count" id="count-pending-comments">0</span>
+        </button>
+        <button class="admin-tab" data-tab="approved-art" role="tab">
+          Approved Art
+        </button>
+        <button class="admin-tab" data-tab="approved-comments" role="tab">
+          Approved Comments
+        </button>
+      </div>
+
+      <div id="tab-pending-art" class="admin-tab-panel is-active">
+        <div id="pending-art-list" class="admin-list">
+          <p class="admin-empty">Nothing pending.</p>
+        </div>
+      </div>
+
+      <div id="tab-pending-comments" class="admin-tab-panel">
+        <div id="pending-comments-list" class="admin-list">
+          <p class="admin-empty">Nothing pending.</p>
+        </div>
+      </div>
+
+      <div id="tab-approved-art" class="admin-tab-panel">
+        <div id="approved-art-list" class="admin-list">
+          <p class="admin-empty">No approved artwork yet.</p>
+        </div>
+      </div>
+
+      <div id="tab-approved-comments" class="admin-tab-panel">
+        <div id="approved-comments-list" class="admin-list">
+          <p class="admin-empty">No approved comments yet.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
