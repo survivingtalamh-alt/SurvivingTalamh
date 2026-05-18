@@ -34,3 +34,5 @@ The short version:
 
 - Cover illustration by **Lea Courtney**
 - Site built for Matthew Lockett
+
+- <!-- Test commit to verify auto-deploy -->
